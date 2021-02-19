@@ -1,20 +1,21 @@
 def maxx(num)
 max=0
 pr = 1
-	while num!=0
+sum=0
+	while num!=0 
 		first = num % 10
 		if first > max
-		max = first
-			for i in 2..max
-				if max.gcd(i)!=1
-					pr = i*max 
-				end
-			end 
+		max = first	
 		end	
+		if max.gcd(num)!=1
+				pr = num*max 
+		end
+		sum+=first 
 		num/=10
 	end
 	puts max
 	puts pr
+	puts sum
 end
 puts maxx(gets.chomp.to_i)
 
