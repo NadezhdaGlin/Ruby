@@ -14,13 +14,25 @@ newmas = read
 puts newmas.inspect
 
 def max(newmas)
-	newmas.max
+	max = 0
+	for i in 0..newmas.size-1
+		if newmas[i] > newmas[i+1]
+			max = newmas[i]
+	end
+	i+=1
+	max
 end
 puts max(newmas)
 
 
 def min(newmas)
-	newmas.min
+min = 0
+	for i in 0..newmas.size-1
+		if newmas[i] < newmas[i+1]
+			min = newmas[i]
+	end
+	i+=1
+	min
 end
 puts min(newmas)
 
