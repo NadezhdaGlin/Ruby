@@ -25,6 +25,30 @@ end
 puts min(newmas)
 
 
+def sum(newmas)
+	first=0	
+	summa=0
+	for i in 0..newmas.size-1
+		first = newmas[i]
+		summa+=first
+	end
+	i+=1
+	summa
+end
+puts sum(newmas)
+
+def mult(newmas)
+	first = 0
+	pr = 1
+	for i in 0..newmas.size-1
+		first = newmas[i]
+		pr*=first
+	end
+	i+=1
+	pr
+end
+puts mult(newmas)
+
 
 # puts mas.inspect
 # puts mas.max
