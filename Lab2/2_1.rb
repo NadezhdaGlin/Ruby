@@ -1,13 +1,37 @@
-#def read(num, mas)
+def read()
 num = gets.chomp
 mas = Array.new
 	while !num.empty?
 		mas << num.to_i
 		num = gets.chomp
 	end
-puts mas.inspect
+	#puts mas.inspect
+	mas
+end
+#puts read.inspect
 
-#end
+newmas = read
+puts newmas.inspect
+
+def max(newmas)
+	newmas.max
+end
+puts max(newmas)
+
+
+def min(newmas)
+	newmas.min
+end
+puts min(newmas)
+
+
+
+# puts mas.inspect
+# puts mas.max
+# puts mas.min 
+# puts mas.sum
+# puts mas.pr
+
 
 #puts mas.inspect
 #first = gets.chomp.to_i
