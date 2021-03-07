@@ -1,3 +1,4 @@
+num = gets.chomp.to_i
 def summa(num)
 	sum=0
 	while num!=0 
@@ -15,9 +16,17 @@ def chek(num)
 	end
 end
 
+def prost(num, num2)
+	for i in 2..num2/2
+		if num % i == 0 && num2 % i == 0
+			return false 
+		end
+	end
+	return true
+end
+
+
 def naim(num, num2)
-	num2 = Random.new
-	num2.rand (10...100)
 	del = 0
 	i = 2
 	while del == 0
@@ -34,12 +43,15 @@ def naim(num, num2)
 end
 
 def pr(num)
-	if chek(num)==true && naim(num, num2)==true
-		return "#{num*num2}"
-	else
-		return false
+	result = 0
+	for num2 in 2..num-1
+		if chek(num2) && naim(num, num2) && prost(num, num2) && num*num2 > result
+			result = num*num2
+		end
 	end
+	result
 end
+puts pr(num)
 #pr = num*num2
 
 #puts pr
@@ -68,3 +80,7 @@ end
 
 #14 - min 2 max 7
 # 14 1 2 7 14
+
+#3 1117
+#
+#
