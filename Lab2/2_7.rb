@@ -8,42 +8,40 @@ def vvod(mas)
 	mas
 end
 
+#40
 
-
-def min()
-	mas = Array.new
-	mas = vvod(mas)
-	mas.filter {|i| i.even?}.min	
-end
-puts min()
-
-# def mas()
-# 	counter = 0
-# 	num = (0 .. mas.size-2).find {|i| mas[i] > mas[i+1] }
-# 	puts num.to_s
+# def min()
+# 	mas = Array.new
+# 	mas = vvod(mas)
+# 	mas.filter {|i| i.even?}.min	
 # end
+# puts min()
+
+#16
+
+# def max1()
+# 	mas = [6,2,4,9,5]
+# 	# mas = vvod(mas)
+# 	max = mas.max
+# 	max2 = mas.clone.filter {|i| i!=max}.max 
+# 	perem, perem2 = [mas.rindex(max), mas.index(max2)].sort
+# 	puts mas[perem+1,perem2-1]
+# end
+# puts max1()
+
+#28
+
+# def max2()
+# 	mas = [8,2,4,6,8,5]
+# 	# mas = vvod(mas)
+# 	max = mas.max 
+# 	perem, perem2 = [mas.rindex(max), mas.index(max)].sort
+# 	puts mas[perem+1,perem2-1]
+# end
+# puts max2()
+
+#4
+
 
 #SELECT и FILTER - ОДНО И ТОЖЕ
 
-# 4 6 5 4 2 9
-
-# def index() 
-# 	mas = Array.new
-# 	mas = vvod2(mas)
-# 	counter = 0
-# 	for i in 0..mas.size-2
-# 		if mas[i] > mas[i+1]
-# 			counter += 1
-# 			puts i
-# 		else
-# 			if counter != 0
-# 				puts i
-# 				counter = 0
-# 			end
-# 		end
-# 	end
-# 	if mas[mas.size-1] < mas[mas.size-2]
-# 		puts mas.size-1
-# 	end
-# end
-# index()
