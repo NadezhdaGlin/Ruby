@@ -41,6 +41,17 @@ end
 # puts max2()
 
 #4
+def ybv()
+	mas = [8,2,4,6,8,5]
+	mas.map.with_index {|num, i| [num, i]}.inject do
+		|acc, elem| 
+		if acc[0] > elem[0] 
+		puts "#{acc[1]} => #{elem[1]}"
+		end
+		elem
+	end
+end
+ybv()
 
 
 #SELECT и FILTER - ОДНО И ТОЖЕ
