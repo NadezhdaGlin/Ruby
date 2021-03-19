@@ -1,3 +1,4 @@
+#4
 def palindrom()
 	s = s.to_s
 	if !ARGV.empty?	
@@ -13,6 +14,7 @@ puts palindrom()
 
 #3443
 
+#11
 def kolvo()
 	s = s.to_s
 	if !ARGV.empty?
@@ -21,3 +23,11 @@ def kolvo()
 end
 puts kolvo()
 
+#15
+
+def chislova()
+	if !ARGV.empty?
+	ARGV[0].to_i.digits.uniq.size
+	end
+end
+puts chislova()
