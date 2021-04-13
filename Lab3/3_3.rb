@@ -1,9 +1,8 @@
 c_p = File.dirname( __FILE__)
 require "#{c_p}/Employee.rb"
 
-def self.checkPhone?(phone)
+def checkPhone?(phone)
 	result = phone =~ /^(8|\+7)([\s\(\)\-]*\d){10}$/
-	return result.nil?
 	phone = phone.strip
 	if Employee.checkPhone?(phone.strip)
 		raise "Номер введен не верно"
@@ -13,4 +12,6 @@ def self.checkPhone?(phone)
 		numbers = phone.chars.filter { |i| digits.include?(i) }
 		numbers.insert(1, "-")
 		numbers.insert(5, "-")
+	return result.nil?
 end
+
