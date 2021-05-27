@@ -70,11 +70,12 @@ class ListEmployee
 		str
 	end
 
-	def search_fio()
+	def search_fio(fio)
+		# puts "We are in search_fio"
+		@mas.select {|el| el.FIO == Employee.prov_fio(fio)}.each {|i| puts i}
 		
+		# str
 	end
-
-
 
 end
 
@@ -82,3 +83,6 @@ object = ListEmployee.new()
 # puts object.add()
 object.read_from_file()
 puts object.show
+# puts object.search_fio
+a = gets.chomp
+puts object.search_fio(a)

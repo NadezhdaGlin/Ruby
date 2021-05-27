@@ -1,10 +1,10 @@
 class Employee
-	attr_accessor :FIO, 
+	attr_reader :FIO,
 	:Born_year, 
-	:Phone, 
-	:Address, 
+	:Phone,  
 	:Email, 
-	:Passport,
+	:Passport
+	attr_accessor :Address,
 	:Stag_rab,
 	:Last_work,
 	:Job_title,
@@ -32,7 +32,7 @@ class Employee
 
 
 	def initialize(fio, born_year, phone, address, email, passport, *args)
-		self.FIO = fio
+		self.FIO= fio
 		self.Born_year = born_year
 		self.Phone = phone
 		self.Address = address
@@ -49,7 +49,7 @@ class Employee
 	end
 
 	def self.fio(num)
-		(num =~ /^([a-яА-Я]+\s*-?\s*[a-яА-Я]+|[a-яА-Я]+(\s+[a-яА-Я]+)?)\s+([a-яА-Я]+\s*-?\s*[a-яА-Я]+|[a-яА-Я]+(\s+[a-яА-Я]+)?)\s+([a-яА-Я]+\s*-?\s*[a-яА-Я]+|[a-яА-Я]+(\s+[a-яА-Я]+)?)$/) != nil
+		(num =~ /^([a-яА-Яa-zA-Z]+\s*-?\s*[a-яА-Яa-zA-Z]+|[a-яА-Яa-zA-Z]+(\s+[a-яА-Яa-zA-Z]+)?)\s+([a-яА-Яa-zA-Z]+\s*-?\s*[a-яА-Яa-zA-Z]+|[a-яА-Яa-zA-Z]+(\s+[a-яА-Яa-zA-Z]+)?)\s+([a-яА-Яa-zA-Z]+\s*-?\s*[a-яА-Яa-zA-Z]+|[a-яА-Яa-zA-Z]+(\s+[a-яА-Яa-zA-Z]+)?)$/) != nil
 	end
 
 	def self.prov_fio(num)
@@ -103,8 +103,21 @@ class Employee
 		num.strip.gsub(/\s+/, " ")
 	end
 
-
 	def to_s
+		return "#{self.FIO} 
+#{self.Born_year}
+#{self.Phone}
+#{self.Address}
+#{self.Email} 
+#{self.Passport}
+#{self.Stag_rab}
+#{self.Last_work}
+#{self.Job_title}
+#{self.Salary}"
+	end
+
+
+	 def show()
 		return "ФИО: #{self.FIO} 
 Год рождения: #{self.Born_year}
 Телефон: #{self.Phone}
@@ -117,14 +130,15 @@ E-mail: #{self.Email}
 Зарплата: #{self.Salary}"
 	end
 
-end
+ end
 
 # human = Employee.new("Агата Кристи", "1463", "+79282462185", "London", "detectiv@gmail.com", "2345 467345", 30, "writer", "Company", 12000)
 # first = TestEmployee.new("ОХАЙ-ЙО")
 # puts ("#{first}\nsay: #{first.Say}")
 # puts human
-puts Employee.prov_fio("Салтыков - щЕдрин Иван-Руслан Ахмед заде")
-puts Employee.prox_passport("1234 674997")
-puts Employee.proverka_phone("89283325909")
-puts Employee.prov_date("1.02.2021")
+# puts Employee.prov_fio("Салтыков - щЕдрин Иван-Руслан Ахмед заде")
+# puts Employee.prox_passport("1234 674997")
+# puts Employee.proverka_phone("89283325909")
+# puts Employee.prov_date("1.2.2021")
+# puts Employee.iskluch_email("glinovanad@gmail.com")
 
